@@ -10,6 +10,7 @@ import { errorHandler } from './utils/errorHandler';
 const port = process.env.PORT || 4000;
 
 const app = express();
+app.use(express.static('build'));
 app.use(
   cors({
     origin: process.env.ORIGIN,
@@ -17,7 +18,6 @@ app.use(
   })
 );
 
-app.use(express.static('build'));
 app.use(cookieParser());
 
 app.use(express.json());
