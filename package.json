@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
     "start": "node ./dist/src/index.js",
-    "build": "npm install && tsc"
+    "build": "npm run migrate:deploy && tsc",
+    "migrate:deploy": "prisma migrate deploy"
   },
   "repository": {
     "type": "git",
