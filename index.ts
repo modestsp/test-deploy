@@ -1,11 +1,11 @@
 import express from 'express';
 import config from 'config';
-import logger from './utils/logger';
-import routes from './utils/routes';
-import deserializeUser from './middleware/deserializeUser';
+import logger from './src/utils/logger';
+import routes from './src/utils/routes';
+import deserializeUser from './src/middleware/deserializeUser';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
-import { errorHandler } from './utils/errorHandler';
+import { errorHandler } from './src/utils/errorHandler';
 
 const port = process.env.PORT || 4000;
 
