@@ -13,7 +13,6 @@ const app = express();
 app.use(express.static('build'));
 app.use(
   cors({
-    origin: process.env.ORIGIN,
     credentials: true,
   })
 );

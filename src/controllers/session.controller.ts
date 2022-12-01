@@ -34,8 +34,8 @@ export const createUserSessionHandler = async (req: Request, res: Response) => {
     httpOnly: true,
     domain: 'localhost',
     path: '/',
-    sameSite: 'strict',
-    secure: false,
+    sameSite: 'none',
+    secure: true,
   });
 
   res.cookie('refreshToken', refreshToken, {
@@ -43,8 +43,8 @@ export const createUserSessionHandler = async (req: Request, res: Response) => {
     httpOnly: true,
     domain: 'localhost',
     path: '/',
-    sameSite: 'lax',
-    secure: false,
+    sameSite: 'none',
+    secure: true,
   });
 
   return res.send({ accessToken, refreshToken });
