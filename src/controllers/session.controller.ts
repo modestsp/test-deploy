@@ -32,7 +32,6 @@ export const createUserSessionHandler = async (req: Request, res: Response) => {
   res.cookie('accessToken', accessToken, {
     maxAge: 900000, // 15min
     httpOnly: true,
-    domain: 'localhost',
     path: '/',
     sameSite: 'none',
     secure: true,
@@ -41,7 +40,6 @@ export const createUserSessionHandler = async (req: Request, res: Response) => {
   res.cookie('refreshToken', refreshToken, {
     maxAge: 3.154e10, // 1y
     httpOnly: true,
-    domain: 'localhost',
     path: '/',
     sameSite: 'none',
     secure: true,
